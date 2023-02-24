@@ -1,0 +1,148 @@
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a, span, li {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+body {
+  background: var(--theme-bg) no-repeat top center/cover;
+}
+body header {
+  margin-top: 80px;
+}
+body header .content {
+  flex-direction: column;
+  width: 588px;
+}
+body header .content .profile {
+  flex-direction: column;
+}
+body header .content .profile .profile-photo {
+  width: 112px;
+  height: 112px;
+  background: var(--color-red);
+  border-radius: 50%;
+}
+body header .content .profile .profile-photo img {
+  border-radius: 50%;
+}
+body header .content .profile .profile-link {
+  margin-top: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+body header .content .theme-button {
+  position: relative;
+  width: 64px;
+  margin: 24px auto;
+}
+body header .content .theme-button button {
+  position: absolute;
+  background: var(--color-theme-change);
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  top: 50%;
+  left: -2px;
+  z-index: 1;
+  transform: translateY(-50%);
+  animation: slide-back 0.2s forwards;
+}
+body header .content .theme-button button .icon {
+  background: var(--theme-button) no-repeat center;
+  width: 32px;
+  height: 32px;
+}
+body header .content .theme-button button:hover {
+  cursor: pointer;
+}
+body header .content .theme-button.dark button {
+  animation: slide-in 0.2s forwards;
+}
+body header .content .theme-button span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  border: 1px solid var(--color-line);
+  filter: blur(0);
+  box-shadow: inset 0 0 3px var(--color-shadows);
+  border-radius: 9999px;
+}
+body header .content .theme-button:hover {
+  cursor: pointer;
+}
+body section {
+  margin-top: 0px;
+}
+body section .main-content {
+  width: 588px;
+}
+body section .main-content ul a li {
+  background: var(--color-buttons);
+  backdrop-filter: blur(4px);
+  width: 540px;
+  height: 56px;
+  padding: 16px 24px;
+  margin: 16px 0;
+  border: 1px solid var(--color-black);
+  border-radius: 8px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+body footer {
+  margin-top: 48px;
+}
+body footer .last-content {
+  width: 588px;
+}
+body footer .last-content .social {
+  gap: 16px;
+}
+body footer .last-content .social img {
+  filter: var(--theme-invert);
+}
+body footer .last-content .made-with-love {
+  margin-top: 48px;
+}
+body footer .last-content .made-with-love span {
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main-page.css.map */
