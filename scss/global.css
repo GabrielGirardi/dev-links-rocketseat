@@ -10,6 +10,7 @@
   --color-theme-change: #fff;
   --color-line: #000;
   --theme-bg: url("../assets/backgrounds/background-light.svg");
+  --theme-photo: #000;
 }
 :root .flex {
   display: flex;

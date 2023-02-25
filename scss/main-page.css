@@ -36,6 +36,7 @@ li {
 
 body {
   background: var(--theme-bg) no-repeat top center/cover;
+  height: 100%;
 }
 body header {
   margin-top: 80px;
@@ -50,7 +51,7 @@ body header .content .profile {
 body header .content .profile .profile-photo {
   width: 112px;
   height: 112px;
-  background: var(--color-red);
+  background: var(--theme-photo);
   border-radius: 50%;
 }
 body header .content .profile .profile-photo img {
@@ -93,7 +94,7 @@ body header .content .theme-button.dark button {
 }
 body header .content .theme-button span {
   display: block;
-  width: 64px;
+  width: 62px;
   height: 24px;
   border: 1px solid var(--color-line);
   filter: blur(0);
@@ -123,6 +124,25 @@ body section .main-content ul a li {
   font-size: 16px;
   text-align: center;
 }
+@media (max-width: 768px) {
+  body section .main-content ul a li {
+    width: 312px;
+  }
+}
+@media (max-width: 320px) {
+  body section .main-content ul a li {
+    width: 280px;
+  }
+}
+@media (min-width: 768px) {
+  body section .main-content ul a li {
+    transition: all 0.2s;
+  }
+  body section .main-content ul a li:hover {
+    filter: invert(0.4);
+    color: #e100ff;
+  }
+}
 body footer {
   margin-top: 48px;
 }
@@ -135,8 +155,19 @@ body footer .last-content .social {
 body footer .last-content .social img {
   filter: var(--theme-invert);
 }
+@media (min-width: 768px) {
+  body footer .last-content .social img {
+    transition: all 0.3s;
+  }
+}
+@media (min-width: 768px) {
+  body footer .last-content .social img:hover {
+    transform: translateY(-3px);
+  }
+}
 body footer .last-content .made-with-love {
   margin-top: 48px;
+  padding-bottom: 40px;
 }
 body footer .last-content .made-with-love span {
   font-weight: 400;
