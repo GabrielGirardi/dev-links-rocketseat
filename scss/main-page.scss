@@ -38,6 +38,7 @@ li {
 
 body {
 	background: var(--theme-bg) no-repeat top center/cover;
+	height: 100%;
 	
 	header {
 		margin-top: 80px;
@@ -52,7 +53,7 @@ body {
 				.profile-photo {
 					width: 112px;
 					height: 112px;
-					background: var(--color-red);
+					background: var(--theme-photo);
 					border-radius: 50%; 
 					
 					img {
@@ -103,7 +104,7 @@ body {
 				
 				span {
 					display: block;
-					width: 64px;
+					width: 62px;
 					height: 24px;
 					border: 1px solid var(--color-line);
 					filter: blur(0);
@@ -141,6 +142,24 @@ body {
 						font-family: 'Inter', sans-serif;
 						font-size: 16px;
 						text-align: center;
+						
+						
+						@media (max-width: 768px) {
+							width: 312px;
+						}
+						
+						@media (max-width: 320px) {
+							width: 280px;
+						}
+						
+						@media (min-width: 768px) {
+							transition: all .2s;
+							
+							&:hover {
+								filter: invert(0.4);
+								color: #e100ff;
+							}
+						}
 					}
 				}	
 			}
@@ -158,11 +177,22 @@ body {
 				
 				img {
 					filter: var(--theme-invert);
+					
+					@media (min-width: 768px) {
+						transition: all .3s;
+					}
+					
+					@media (min-width: 768px) {
+						&:hover {
+							transform: translateY(-3px);
+						}
+					}
 				}
 			}
 			
 			.made-with-love {
 				margin-top: 48px;
+				padding-bottom: 40px;
 				
 				span {
 					font-weight: 400;
