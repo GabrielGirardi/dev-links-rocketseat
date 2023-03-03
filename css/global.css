@@ -1,0 +1,17 @@
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-red: red;
+  --color-theme-change: #fff;
+}
+:root .flex {
+  display: flex;
+}
+:root .align-center {
+  align-items: center;
+}
+:root .justify-center {
+  justify-content: center;
+}
+
+/*# sourceMappingURL=global.css.map */
